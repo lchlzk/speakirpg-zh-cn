@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         斯皮奇养成 - 简体中文翻译
 // @namespace    https://speakirpg.overture.io.kr/
-// @version      0.2.8
+// @version      0.2.9
 // @description  为 Speaki RPG（斯皮奇养成）的菜单、任务、背包、商店、对话等动态界面提供简体中文翻译。
 // @author       小奶茶
 // @homepageURL  https://github.com/lchlzk/speakirpg-zh-cn
@@ -23,7 +23,7 @@
 (function () {
   "use strict";
 
-  const SCRIPT_VERSION = "0.2.8";
+  const SCRIPT_VERSION = "0.2.9";
   const SETTINGS_KEY = "speakirpg-zh-cn-settings-v1";
   const TRANSLATABLE_ATTRIBUTES = ["placeholder", "title", "aria-label", "alt"];
   const ATTRIBUTE_SELECTOR = TRANSLATABLE_ATTRIBUTES.map((name) => `[${name}]`).join(",");
@@ -1001,6 +1001,10 @@
   [
     "Marsh Witch's Brimmed Hat x{quantity} (ATK+{bonus_atk} DEF+{bonus_def} HP+{bonus_hp}, Req. Lv {bonus_level})",
     "湿地女巫宽檐帽 x{quantity} （攻+{bonus_atk} 防+{bonus_def} 体+{bonus_hp}，需要等级 {bonus_level}）"
+  ],
+  [
+    "The raid was cancelled because not everyone made it in — every party member must enter for the raid to start",
+    "未能全员入场，本次团队副本已取消。请等所有队员到齐后再开始"
   ],
   [
     "골짜기 안쪽 봉인 제단이 끝내 깨졌어요. 잉걸 용린 폭군이 걸어 나오기 전에… 부디 동료를 모아 제단으로 드세요. 레벨 서른일곱은 되셔야 봉인문이 열린답니다. 혼자서는 절대 안 돼요, 스피키씨.",
@@ -2523,6 +2527,10 @@
     "{base_name} — 冷却 {base_sec} 秒（快捷键：{base_key}） 贯穿直线上的所有敌人（最多 {cap_n} 个目标）"
   ],
   [
+    "{name} is not on the map with the sealed altar, so the party cannot enter",
+    "{name} 不在封印祭坛所在的地图，队伍无法入场"
+  ],
+  [
     "利用が制限されているアカウントのため復旧できません。異議がある場合は新しいアカウントを作成し、設定 > 開発者へのお問い合わせからご連絡ください。",
     "此账号已被限制使用，无法恢复。如需申诉，请创建新账号并通过设置 > 联系开发者提交。"
   ],
@@ -2589,6 +2597,10 @@
   [
     "Lv{level} {slot} — grants +{def} Defense and +{hp} Max HP when equipped.",
     "Lv.{level} {slot} — 防御力 +{def}，最大生命值 +{hp}"
+  ],
+  [
+    "Tap the emote (smiley) button below next to a downed ally to revive them",
+    "靠近倒地的队友，点击下方的表情（笑脸）按钮，即可将其救起"
   ],
   [
     "Welcome to {zoneName}! The deeper you go, the stronger the monsters get.",
@@ -2719,12 +2731,12 @@
     "对方的好友列表已满，无法接受此申请。"
   ],
   [
-    "Upgrades can't be undone. A way to redistribute will be added later.",
-    "属性强化后无法撤销；重置分配功能将在之后推出。"
+    "Touching a nuruling downs you — your drones fight back automatically",
+    "碰到努噜灵就会倒地！无人机会自动作战，注意躲避敌人"
   ],
   [
-    "You can earn EXP rewards up to 10 times a day. Entries are unlimited",
-    "每天前 10 次挑战可获得经验奖励，挑战次数不限"
+    "Upgrades can't be undone. A way to redistribute will be added later.",
+    "属性强化后无法撤销；重置分配功能将在之后推出。"
   ],
   [
     "감시 관제탑까지 넘었으니 이제야 동력핵 본체가 모습을 드러냈네. 유령, 이번에도 혼자 갈 생각이면 곤란해 — 동료 데려가.",
@@ -2881,6 +2893,10 @@
   [
     "Nicknames must be 2-12 characters of Korean, letters, or digits.",
     "昵称须由 2–12 个韩文、英文字母或数字组成。"
+  ],
+  [
+    "You can earn rewards up to 10 times a day. Entries are unlimited",
+    "每天最多可领取 10 次奖励，挑战次数不限"
   ],
   [
     "곡성의 근원 — 곡성유령의 울음이 그치질 않아요. 열둘만 잠재워 주세요. / 진행 {current}/{target}",
@@ -3451,10 +3467,6 @@
     "此账号已被限制使用。如需申诉，请创建新账号，并通过设置 > 联系开发者提交申请。"
   ],
   [
-    "{name} was not summoned — they are on a different map",
-    "{name} 位于其他地图，未能被召唤"
-  ],
-  [
     "復旧すると現在のアカウントは削除されます。必要であれば先に現在のアカウントの復旧コードをメモしてください。",
     "恢复后，当前账号将被删除。如有需要，请先记下当前账号的恢复码。"
   ],
@@ -3927,6 +3939,10 @@
     "斯皮奇感动不已，说糖果甜中微苦的滋味，就像自己那荆棘丛生的人生。"
   ],
   [
+    "パーティー全員が入場できなかったため、レイドが中止されました。全員そろわないと開始できません",
+    "未能全员入场，本次团队副本已取消。请等所有队员到齐后再开始"
+  ],
+  [
     "{name}이(가) 다 떨어졌습니다 — 상점에서 보충하거나 다른 포션을 지정하세요",
     "{name} 已用完 — 请到商店补充或指定其他药水"
   ],
@@ -3963,6 +3979,10 @@
     "本月未设置签到奖励"
   ],
   [
+    "Survive 6 minutes against swarming nurulings.",
+    "在蜂拥而来的努噜灵群中坚持生存 6 分钟！"
+  ],
+  [
     "You can chat once you reach level {minLevel}.",
     "达到 {minLevel} 级后才能发送聊天消息。"
   ],
@@ -3977,6 +3997,10 @@
   [
     "그 계피맛 알사탕, 아껴 두지 말고 하나 드셔 보세요. 제가 직접 조린 거랍니다.",
     "别舍不得那颗肉桂味硬糖，尝一颗吧。那可是我亲手熬制的。"
+  ],
+  [
+    "쓰러진 동료 옆에서 하단 감정표현(웃는 얼굴) 버튼을 누르면 부활시킬 수 있습니다",
+    "靠近倒地的队友，点击下方的表情（笑脸）按钮，即可将其救起"
   ],
   [
     "필드로 돌아가서 계속해 볼까요! 포탈 앞에서 {key} 버튼을 누르시면 이동해요.",
@@ -4005,6 +4029,10 @@
   [
     "霧に包まれた湿地への道が開けました。ヒキガエルの使い魔を十匹だけ、片づけてきてください。",
     "通往月雾湿地的道路已经开放。请清除十只湿地蟾蜍使魔。"
+  ],
+  [
+    "Earn rewards every day based on your ranking",
+    "每日还可根据排名获得奖励"
   ],
   [
     "Lv5 weapon — grants +8 Attack when equipped.",
@@ -4095,6 +4123,10 @@
     "此物品与装备栏位不匹配。"
   ],
   [
+    "Today: {remaining}/{cap} rewarded runs left",
+    "今日剩余奖励次数：{remaining}/{cap}"
+  ],
+  [
     "You cannot change channels while in combat.",
     "战斗期间无法切换频道。"
   ],
@@ -4159,6 +4191,10 @@
     "也来我的商店看看吧。随便买一件东西，很快就能上手。"
   ],
   [
+    "파티 전원이 입장하지 못해 레이드가 취소되었습니다. 전원이 모여야 시작됩니다",
+    "未能全员入场，本次团队副本已取消。请等所有队员到齐后再开始"
+  ],
+  [
     "いいですね、とどめを刺してください!モンスターを倒すと経験値と戦利品が得られますよ。",
     "很好，现在击败它吧！打倒怪物可以获得经验值和战利品。"
   ],
@@ -4185,10 +4221,6 @@
   [
     "Connection lost — Please refresh the page",
     "连接已断开，请刷新页面"
-  ],
-  [
-    "Earn Elif every day based on your ranking",
-    "每日排名还能赢取水晶叶"
   ],
   [
     "Enhancement succeeded! Reached Lv.{level}",
@@ -4233,10 +4265,6 @@
   [
     "강화는 되돌릴 수 없습니다. 배분 변경 수단은 추후 별도 제공 예정입니다.",
     "属性强化后无法撤销；重置分配功能将在之后推出。"
-  ],
-  [
-    "경험치 보상은 하루 최대 10회까지 받을 수 있습니다. 입장은 무제한입니다",
-    "每天前 10 次挑战可获得经验奖励，挑战次数不限"
   ],
   [
     "상대가 이미 나에게 친구 요청을 보냈습니다. 받은 요청함을 확인해 주세요.",
@@ -4519,6 +4547,10 @@
     "{name} — 返回城镇并恢复全部生命值（快捷键：{key}）"
   ],
   [
+    "倒れた仲間のそばで下の感情表現(スマイル)ボタンをタップすると蘇生できます",
+    "靠近倒地的队友，点击下方的表情（笑脸）按钮，即可将其救起"
+  ],
+  [
     "封印の間には回復の泉がありません。ポーションは事前に準備しておきましょう。",
     "封印之室内没有治愈之泉，请提前备好药水。"
   ],
@@ -4593,6 +4625,10 @@
   [
     "기본 {base} + 장비 {equip} + 강화 {upgrade}",
     "基础 {base} + 装备 {equip} + 强化 {upgrade}"
+  ],
+  [
+    "보상은 하루 최대 10회까지 받을 수 있습니다. 입장은 무제한입니다",
+    "每天最多可领取 10 次奖励，挑战次数不限"
   ],
   [
     "아직 주고받은 문의가 없습니다. 궁금한 점이나 버그를 남겨 주세요.",
@@ -4763,6 +4799,10 @@
     "{name} — 冷却 {sec} 秒（快捷键：{key}）"
   ],
   [
+    "{name}님이 봉인 제단이 있는 맵에 없어 입장할 수 없습니다",
+    "{name} 不在封印祭坛所在的地图，队伍无法入场"
+  ],
+  [
     "{zoneName}へようこそ!奥へ進むほど強い子たちが出てきますよ。",
     "欢迎来到 {zoneName}！越往深处，出现的怪物就越强。"
   ],
@@ -4777,10 +4817,6 @@
   [
     "今日も来てくださったんですね。少し顔を見せていただくだけで十分ですよ。",
     "今天也来报到了呢。只要露个面就足够了。"
-  ],
-  [
-    "経験値報酬は1日最大10回まで獲得できます。入場回数に制限はありません",
-    "每天前 10 次挑战可获得经验奖励，挑战次数不限"
   ],
   [
     "所持ゴールド {gold} · 所持素材ポイント {points}pt",
@@ -5015,6 +5051,10 @@
     "昵称设置失败，请稍后重试"
   ],
   [
+    "ヌウリングに触れるとダウンします — ドローンが自動で戦ってくれます",
+    "碰到努噜灵就会倒地！无人机会自动作战，注意躲避敌人"
+  ],
+  [
     "プレゼントが届きましたよ!Mキーで郵便箱から受け取ってみてください。",
     "礼物到了！按 M 键前往邮箱领取。"
   ],
@@ -5029,6 +5069,10 @@
   [
     "{name} is already in another raid",
     "{name} 已在其他团队副本中"
+  ],
+  [
+    "{name}さんが封印の祭壇があるマップにいないため入場できません",
+    "{name} 不在封印祭坛所在的地图，队伍无法入场"
   ],
   [
     "{population} / {capacity} players",
@@ -5159,8 +5203,16 @@
     "Lv50 下装——装备时防御力 +8，最大 HP +81"
   ],
   [
+    "No minigame is running right now.",
+    "目前没有开放的小游戏。"
+  ],
+  [
     "Only the party leader can do that",
     "只有队长可以执行此操作"
+  ],
+  [
+    "Party status {partyStatus_status}",
+    "队员存活：{partyStatus_status}"
   ],
   [
     "Power Line Watch Drone Lv.{level}",
@@ -5281,6 +5333,10 @@
   [
     "☑ 일일 한정 {remaining}/{dailyLimit}",
     "☑ 每日限购 {remaining}/{dailyLimit}"
+  ],
+  [
+    "報酬は1日最大10回まで獲得できます。入場回数に制限はありません",
+    "每天最多可领取 10 次奖励，挑战次数不限"
   ],
   [
     "強化は元に戻せません。振り分けの変更手段は今後別途提供予定です。",
@@ -5923,6 +5979,10 @@
     "雷云飞龙 Lv.{level}"
   ],
   [
+    "Today: unlimited rewarded runs",
+    "今日奖励次数不限"
+  ],
+  [
     "Today's reward already claimed",
     "今日奖励已领取"
   ],
@@ -5945,6 +6005,10 @@
   [
     "내 친구 목록이 가득 차서 요청을 수락할 수 없습니다.",
     "你的好友列表已满，无法接受此申请。"
+  ],
+  [
+    "누루링에 닿으면 다운됩니다 — 드론이 자동으로 싸워줘요",
+    "碰到努噜灵就会倒地！无人机会自动作战，注意躲避敌人"
   ],
   [
     "다섯 날 얼굴을 비춰 주세요. 교단은 성실을 기억해요.",
@@ -5975,6 +6039,10 @@
     "2–12 个韩文、英文字母或数字（不可使用空格或特殊符号）"
   ],
   [
+    "パーティー生存状況 {partyStatus_status}",
+    "队员存活：{partyStatus_status}"
+  ],
+  [
     "{count} owned · Heals {heal}%",
     "持有 {count} 个 · 恢复 {heal}%"
   ],
@@ -5987,16 +6055,16 @@
     "{name} 不在当前地图，无法一同入场"
   ],
   [
-    "{name}さんは別のマップにいるため召喚されませんでした",
-    "{name} 位于其他地图，未能被召唤"
-  ],
-  [
     "☑ 限定 {remaining}/{totalLimit}",
     "☑ 限购 {remaining}/{totalLimit}"
   ],
   [
     "☑ 한정 {remaining}/{totalLimit}",
     "☑ 限购 {remaining}/{totalLimit}"
+  ],
+  [
+    "6분 동안 몰려드는 누루링 무리 속에서 살아남으세요.",
+    "在蜂拥而来的努噜灵群中坚持生存 6 分钟！"
   ],
   [
     "愛情度のレベルが上がるたびに黄金のクレパスを1個もらえます",
@@ -6171,16 +6239,16 @@
     "{name} — 召唤马车或下车（快捷键：{key}）"
   ],
   [
-    "{name}님은 다른 맵에 있어 소환되지 않았습니다",
-    "{name} 位于其他地图，未能被召唤"
-  ],
-  [
     "{name}님이 다른 맵에 있어 참여하지 못했습니다",
     "{name} 不在当前地图，无法一同入场"
   ],
   [
     "{stat} 강화 {current} → {next}",
     "{stat} {current} → {next}"
+  ],
+  [
+    "本日の報酬回数 残り{remaining}/{cap}回",
+    "今日剩余奖励次数：{remaining}/{cap}"
   ],
   [
     "開発用の鎧 — 装備するとさいだいHP+999,999。",
@@ -6239,6 +6307,10 @@
     "入场失败，请稍后再试"
   ],
   [
+    "Final survival time {score}s",
+    "最终生存时间 {score}秒"
+  ],
+  [
     "Great Marsh Witch Lv.{level}",
     "大沼泽女巫 Lv.{level}"
   ],
@@ -6253,6 +6325,10 @@
   [
     "Mecha Pumpkin is on cooldown",
     "机械南瓜正在等待重新召唤"
+  ],
+  [
+    "Party best survival {score}s",
+    "队伍最长生存 {score}秒"
   ],
   [
     "Please enter a recovery code",
@@ -6325,6 +6401,10 @@
   [
     "5분 동안 호박을 피해 최대한 멀리 달려 보세요.",
     "躲开滚来的假南瓜，在 5 分钟内尽可能跑得更远！"
+  ],
+  [
+    "6分間、押し寄せるヌウリングの群れを生き延びましょう。",
+    "在蜂拥而来的努噜灵群中坚持生存 6 分钟！"
   ],
   [
     "報酬テーブルが空のため、このアイテムは使用できません。",
@@ -6403,6 +6483,10 @@
     "月影女巫 Lv.{level}"
   ],
   [
+    "Night mode (darker scenery)",
+    "夜间模式（调暗场景）"
+  ],
+  [
     "Permanent — click once more",
     "永久强化（再次点击确认）"
   ],
@@ -6469,6 +6553,10 @@
   [
     "애정도 적립! (오늘 {points}/{cap})",
     "获得好感度！（今日 {points}/{cap}）"
+  ],
+  [
+    "오늘 보상 {remaining}/{cap}회 남음",
+    "今日剩余奖励次数：{remaining}/{cap}"
   ],
   [
     "한정 {remaining}/{totalLimit}",
@@ -6659,6 +6747,10 @@
     "左键：锁定怪物；与 NPC 对话（固定）"
   ],
   [
+    "파티 생존 {partyStatus_status}",
+    "队员存活：{partyStatus_status}"
+  ],
+  [
     "혼자 벅차다면, 동료와 함께 제단을 두드리세요.",
     "如果独自应付不来，就和伙伴们一起挑战祭坛吧。"
   ],
@@ -6697,6 +6789,10 @@
   [
     "{score}m (Top {percent}%)",
     "{score}m（前 {percent}%）"
+  ],
+  [
+    "{score}s (Top {percent}%)",
+    "{score}秒（前 {percent}%）"
   ],
   [
     "「{questTitle}」クエスト完了報酬です。",
@@ -6867,10 +6963,6 @@
     "需要达到 {level} 级才能进入"
   ],
   [
-    "매일 랭킹에 따라 엘리프를 획득할 수 있습니다",
-    "每日排名还能赢取水晶叶"
-  ],
-  [
     "메카 드론 - 집중 사격 x{quantity}",
     "机械无人机·集中射击 x{quantity}"
   ],
@@ -6941,6 +7033,10 @@
   [
     "{score}m (상위 {percent}%)",
     "{score}m（前 {percent}%）"
+  ],
+  [
+    "{score}초 (상위 {percent}%)",
+    "{score}秒（前 {percent}%）"
   ],
   [
     "別の端末でログインされたため、接続が終了しました",
@@ -7075,6 +7171,10 @@
     "尚未装备，属性加成不会生效"
   ],
   [
+    "NuruLing Busters Ranking",
+    "努噜灵大作战 · 今日排行榜"
+  ],
+  [
     "Patrol Drone (Old Model)",
     "巡逻无人机（旧型）"
   ],
@@ -7121,6 +7221,10 @@
   [
     "대상 HP {pct}% 이하일 때 위력 강화",
     "目标 HP 低于或等于 {pct}% 时威力提升"
+  ],
+  [
+    "매일 랭킹에 따라 보상을 획득할 수 있습니다",
+    "每日还可根据排名获得奖励"
   ],
   [
     "보유 {count}개 · 회복 {heal}%",
@@ -7177,10 +7281,6 @@
   [
     "今週の大きな役目です。百体、種類は問いません。",
     "这是本周的大任务。讨伐一百只，种类不限。"
-  ],
-  [
-    "毎日のランキングに応じてエリーフを獲得できます",
-    "每日排名还能赢取水晶叶"
   ],
   [
     "認証情報が無効です。再度ログインしてください。",
@@ -7427,6 +7527,10 @@
     "回复 {nickname}"
   ],
   [
+    "{score}秒（上位{percent}%）",
+    "{score}秒（前 {percent}%）"
+  ],
+  [
     "{score}m（上位{percent}%）",
     "{score}m（前 {percent}%）"
   ],
@@ -7631,6 +7735,10 @@
     "今日最佳 {score}m"
   ],
   [
+    "Today's best: {score}s",
+    "今日最长生存 {score}秒"
+  ],
+  [
     "Tomb Shadow Lv.{level}",
     "墓影 Lv.{level}"
   ],
@@ -7793,6 +7901,10 @@
   [
     "煤まみれインプボット Lv.{level}",
     "烟灰小恶魔机器人 Lv.{level}"
+  ],
+  [
+    "毎日のランキングに応じて報酬を獲得できます",
+    "每日还可根据排名获得奖励"
   ],
   [
     "牽引アームオートマタ Lv.{level}",
@@ -8109,6 +8221,10 @@
   [
     "{warning}\n本当に復旧しますか？",
     "{warning}\n确定要恢复吗？"
+  ],
+  [
+    "/ Your kills {kills}",
+    "｜ 我的击杀：{kills}"
   ],
   [
     "1회 최대 구매 수량을 초과했습니다.",
@@ -8863,6 +8979,10 @@
     "今日最佳 {score}m"
   ],
   [
+    "오늘 내 최고 기록 {score}초",
+    "今日最长生存 {score}秒"
+  ],
+  [
     "용족 전투각반 x{quantity}",
     "龙族战斗护胫 x{quantity}"
   ],
@@ -8921,6 +9041,10 @@
   [
     "폭주 전력 정령 Lv.{level}",
     "暴走电力精灵 Lv.{level}"
+  ],
+  [
+    "현재 진행되는 미니게임이 없습니다.",
+    "目前没有开放的小游戏。"
   ],
   [
     "エルフの斥候帽 x{quantity}",
@@ -9097,6 +9221,10 @@
   [
     "先にニックネームを設定してください。",
     "请先设置昵称。"
+  ],
+  [
+    "現在開催中のミニゲームはありません。",
+    "目前没有开放的小游戏。"
   ],
   [
     "線路清掃ボット Lv.{level}",
@@ -9443,6 +9571,10 @@
     "对方已在其他队伍中"
   ],
   [
+    "パーティー最高生存 {score}秒",
+    "队伍最长生存 {score}秒"
+  ],
+  [
     "パーティボーナス +{amount}",
     "队伍加成 +{amount}"
   ],
@@ -9477,6 +9609,10 @@
   [
     "暴走電力精霊 Lv.{level}",
     "暴走电力精灵 Lv.{level}"
+  ],
+  [
+    "本日の自己ベスト {score}秒",
+    "今日最长生存 {score}秒"
   ],
   [
     "本日の自己ベスト {score}m",
@@ -9577,6 +9713,10 @@
   [
     "Channel {channel}",
     "频道 {channel}"
+  ],
+  [
+    "Choose a Minigame",
+    "选择小游戏"
   ],
   [
     "Closest to cursor",
@@ -9831,12 +9971,20 @@
     "最终距离 {score}m"
   ],
   [
+    "최종 생존 기록 {score}초",
+    "最终生存时间 {score}秒"
+  ],
+  [
     "출석 {day}일차 보상입니다.",
     "这是第 {day} 天的签到奖励。"
   ],
   [
     "코일 거미봇 Lv.{level}",
     "线圈蜘蛛机器人 Lv.{level}"
+  ],
+  [
+    "파티 최고 생존 {score}초",
+    "队伍最长生存 {score}秒"
   ],
   [
     "폭주 동력핵 Lv.{level}",
@@ -9867,6 +10015,10 @@
     "电火花精灵 Lv.{level}"
   ],
   [
+    "ヌウリング・バスターズ ランキング",
+    "努噜灵大作战 · 今日排行榜"
+  ],
+  [
     "パーティーリーダーのみ入場できます",
     "只有队长可以开启团队副本"
   ],
@@ -9893,6 +10045,10 @@
   [
     "{name}님이 전투 중입니다",
     "{name} 正在战斗"
+  ],
+  [
+    "/ 自分の撃破数 {kills}",
+    "｜ 我的击杀：{kills}"
   ],
   [
     "☑ Sold out today",
@@ -10065,6 +10221,10 @@
   [
     "Not enough gold.",
     "金币不足。"
+  ],
+  [
+    "NuruLing Busters",
+    "努噜灵大作战"
   ],
   [
     "Quest not found.",
@@ -10403,6 +10563,10 @@
     "最终距离 {score}m"
   ],
   [
+    "最終生存記録 {score}秒",
+    "最终生存时间 {score}秒"
+  ],
+  [
     "Begin Adventure",
     "开始冒险"
   ],
@@ -10605,6 +10769,10 @@
   [
     "{time} 후 자동 귀환",
     "将在 {time} 后自动返回"
+  ],
+  [
+    "/ 내 킬수 {kills}",
+    "｜ 我的击杀：{kills}"
   ],
   [
     "+1강 → {level}강",
@@ -11167,6 +11335,10 @@
     "物品 #{itemId}"
   ],
   [
+    "야간 모드(배경 어둡게)",
+    "夜间模式（调暗场景）"
+  ],
+  [
     "이미 처리된 요청입니다.",
     "此请求已经处理。"
   ],
@@ -11305,6 +11477,10 @@
   [
     "位置の取得に失敗しました",
     "无法加载位置"
+  ],
+  [
+    "夜間モード(背景を暗く)",
+    "夜间模式（调暗场景）"
   ],
   [
     "移動キーは変更できません",
@@ -11567,6 +11743,10 @@
     "强化达到 +{level}！"
   ],
   [
+    "本日の報酬回数 無制限",
+    "今日奖励次数不限"
+  ],
+  [
     "本日の記録がありません",
     "今日尚无人上榜"
   ],
@@ -11693,6 +11873,10 @@
   [
     "귀환이 취소되었습니다",
     "回城已中断"
+  ],
+  [
+    "누루링 버스터즈 랭킹",
+    "努噜灵大作战 · 今日排行榜"
   ],
   [
     "다른 계정 복구...",
@@ -11825,6 +12009,10 @@
   [
     "ニックネーム設定に戻る",
     "返回昵称设置"
+  ],
+  [
+    "ヌウリング・バスターズ",
+    "努噜灵大作战"
   ],
   [
     "まもなく町へ戻ります…",
@@ -12503,6 +12691,10 @@
     "黎明守望者头盔"
   ],
   [
+    "오늘 보상 무제한",
+    "今日奖励次数不限"
+  ],
+  [
     "용광로 코어 골렘",
     "熔炉核心魔像"
   ],
@@ -12585,6 +12777,14 @@
   [
     "ブロックリスト管理",
     "屏蔽列表管理"
+  ],
+  [
+    "{score}s",
+    "{score}秒"
+  ],
+  [
+    "{score}초",
+    "{score}秒"
   ],
   [
     "☑ 本日売り切れ",
@@ -12855,6 +13055,10 @@
     "前往暮色森林边境"
   ],
   [
+    "누루링 버스터즈",
+    "努噜灵大作战"
+  ],
+  [
     "눈보라 속 불씨",
     "暴风雪中的鬼火"
   ],
@@ -13113,6 +13317,10 @@
   [
     "ホットバーボタン",
     "快捷栏按钮"
+  ],
+  [
+    "ミニゲームを選択",
+    "选择小游戏"
   ],
   [
     "メカカボチャ召喚",
@@ -13565,6 +13773,10 @@
   [
     "무덤지기 후드",
     "守墓人兜帽"
+  ],
+  [
+    "미니게임 선택",
+    "选择小游戏"
   ],
   [
     "번개철탑 능선",
@@ -14041,6 +14253,10 @@
   [
     "Change",
     "更改"
+  ],
+  [
+    "Choose",
+    "选择"
   ],
   [
     "Combat",
@@ -15743,6 +15959,10 @@
     "下装"
   ],
   [
+    "選択",
+    "选择"
+  ],
+  [
     "削除",
     "删除"
   ],
@@ -15905,6 +16125,10 @@
   [
     "상점",
     "商店"
+  ],
+  [
+    "선택",
+    "选择"
   ],
   [
     "설정",
@@ -16180,13 +16404,16 @@
   const NUMERIC_PLACEHOLDER_NAMES = new Set([
     "amount", "atk", "attempt", "base", "cap", "capacity", "channel", "count", "current",
     "dailyLimit", "day", "def", "delta", "distance", "down", "equip", "exp", "gold", "heal",
-    "hp", "itemId", "keep", "level", "max", "maxExp", "maxHp", "minLevel", "n", "next", "pct",
+    "hp", "itemId", "keep", "kills", "level", "max", "maxExp", "maxHp", "minLevel", "n", "next", "pct",
     "percent", "playerId", "points", "population", "quantity", "radius", "rank", "remaining", "score",
     "sec", "seconds", "slotCount", "status", "success", "target", "time", "total", "totalLimit",
     "unlockLevels", "upgrade", "value", "x", "z", "zone", "zoneId",
   ]);
 
   function placeholderCapturePattern(name) {
+    // Game HUD joins up to four O/X party slots with non-breaking spaces.
+    // Keep this separate from the numeric {status} used by HTTP errors.
+    if (name === "partyStatus_status") return "([OX](?:\\s+[OX]){0,3})";
     const leafName = name.replace(/^(?:base|mechanism|cap)_/, "");
     if (!NUMERIC_PLACEHOLDER_NAMES.has(leafName)) return "(.+?)";
     // Dynamic numeric fields may contain signs, grouping, decimals, ratios, percentages, or time colons,
@@ -16727,4 +16954,3 @@
   installNativeDialogHooks();
   boot();
 })();
-
